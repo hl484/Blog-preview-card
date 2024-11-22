@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(47, 88%, 63%);
+    display: flex;
+    flex-direction: column; /* 將主軸設為垂直方向 */
+    justify-content: center; /* 卡片和 attribution 在垂直方向居中 */
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 380px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+
+}
+
+.card img {
+    width: 100%; /*把黃色圖片變得剛好*/
+    border-radius: 15px;
+
+
+}
+
+.card .tag {
+    display: inline-block;
+    background-color: #FFCA28;
+    color: #000; /* 黑色文字 */
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+}
+
+.card h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+
+}
+
+.card h2 {
+    font-size: 0.9em;
+    color: hsl(0, 0%, 42%);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: hsl(0, 0%, 42%);
+    line-height: 1.5;
+    margin-bottom: 7px;
+    padding: 5px;
+}
+
+.card .author {
+    align-items: center;
+    display: flex;
+}
+
+.card .author img {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* 圓形頭像 */
+    margin-right: 10px;
+
+}
+
+.card .author span {
+
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/*!* Attribution 固定在底部 *!*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px; /* 與內容保持距離 */
+}
