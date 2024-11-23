@@ -1,95 +1,124 @@
+/* 重置樣式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 變數管理 */
+:root {
+    --background-color: hsl(47, 88%, 63%);
+    --card-background: hsl(0, 0%, 100%);
+    --text-grey: hsl(0, 0%, 42%);
+    --text-black: hsl(0, 0%, 7%);
+}
+
+/* 全局樣式 */
 body {
-    background-color: hsl(47, 88%, 63%);
+    background-color: var(--background-color);
     display: flex;
-    flex-direction: column; /* 將主軸設為垂直方向 */
-    justify-content: center; /* 卡片和 attribution 在垂直方向居中 */
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Figtree', sans-serif;
-
 }
 
+/* 卡片樣式 */
 .card {
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
+    background-color: var(--card-background);
+    border-radius: 20px;
     width: 380px;
-    padding: 15px;
+    padding: 24px;
     text-align: left;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 8px 8px black;
+    outline: 1px solid black;
 
 }
 
 .card img {
-    width: 100%; /*把黃色圖片變得剛好*/
+    width: 100%;
     border-radius: 15px;
-
-
+    margin-bottom: 16px;
 }
 
 .card .tag {
     display: inline-block;
     background-color: #FFCA28;
-    color: #000; /* 黑色文字 */
-    font-size: 12px;
-    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+    font-weight: 800;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-
+    padding: 4px 12px;
+    margin-bottom: 16px;
 }
 
 .card h1 {
     font-size: 1.5em;
-    font-weight: bold;
-    margin: 10px 0;
 
+    margin: 16px 0;
+    font-weight: 800;
 }
 
 .card h2 {
     font-size: 0.9em;
-    color: hsl(0, 0%, 42%);
-    margin-bottom: 10px;
+    color: var(--text-grey);
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
 .card p {
     font-size: 1em;
-    color: hsl(0, 0%, 42%);
+    color: var(--text-grey);
     line-height: 1.5;
-    margin-bottom: 7px;
-    padding: 5px;
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
 .card .author {
     align-items: center;
     display: flex;
+    margin-top: 20px;
 }
 
 .card .author img {
-
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* 圓形頭像 */
+    border-radius: 50%;
     margin-right: 10px;
-
 }
 
 .card .author span {
-
     font-size: 14px;
-    color: #000;
-    font-weight: bold;
-    line-height: 30px;
+    color: var(--text-black);
+
+    line-height: normal;
+    font-weight: 800;
 }
 
-/*!* Attribution 固定在底部 *!*/
+/* Attribution 固定在底部 */
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-top: 20px; /* 與內容保持距離 */
+    margin-top: 20px;
+}
+
+/* 響應式設計 */
+@media (max-width: 767px) {
+    .card {
+        padding: 16px;
+    }
+    .card img {
+        margin-bottom: 12px;
+    }
+    .card .tag {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+    .card h1 {
+        font-size: 1.2em;
+    }
+    .card p {
+        font-size: 0.9em;
+    }
 }
