@@ -108,16 +108,20 @@ body {
     .card {
         padding: 16px;
     }
+
     .card img {
         margin-bottom: 12px;
     }
+
     .card .tag {
         font-size: 10px;
         margin-bottom: 8px;
     }
+
     .card h1 {
         font-size: 1.2em;
     }
+
     .card p {
         font-size: 0.9em;
     }
